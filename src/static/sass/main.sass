@@ -3,21 +3,7 @@
 @import mixins
 @import responsive
 
-*
-    box-sizing: border-box
-
-html
-    height: 100%
-
-body
-    height: 100%
-    background: #fff
-    padding: 0
-    margin: 0
-    font-family: $content-font
-
-ul
-    list-style: none
+// HEADER COMPONENTS
 
 header
     position: fixed
@@ -31,36 +17,19 @@ header
     -webkit-box-shadow: 0 5px 10px #555
     box-shadow:         0 5px 10px #555
 
-
-.container
-    display: block
-    width: 80%
-    margin: 0 auto
-    padding: 0
-
-.container::after
-    content: ''
-    display: block
-    clear: both
-
-.logo
-    margin: 10px 0
+#logo
+    margin: 10px 0 0 0
     text-align: center
     float: left
-    font-family: $header-font
-    h1
-        margin: 0
+    h3
+        margin: 5px 0 0 0
         color: $contrast-color
-
-.fa-star
-    color: $complement-color
 
 nav
     float: right
     margin-top: 30px
     a
         padding-bottom: 24px
-        text-decoration: none
         display: inline-block
         margin-left: 20px
         font-family: $link-font
@@ -75,62 +44,38 @@ nav
             color: $contrast-color
             border-bottom: 5px solid $complement-color
 
-h2
-    color: #fff
-    font-size: 4em
-    font-weight: 700
-    font-family: $header-font
-    text-transform: uppercase
-    margin: 0
-    span
-        display: inline-block
-        padding: 20px 30px
-        border: 10px double #fff
-
-h3
-    color: #fff
-    font-family: $header-font
-    font-size: 1.3em
-    font-weight: normal
-    text-transform: uppercase
-
-p
-    font-size: 1.1em
-
-.section
-    height: 100%
+// MAIN SECTION
 
 .sectOne
+    height: 100%
     background: url(../img/hotel_dark.jpeg) no-repeat center center fixed
     -webkit-background-size: cover
     -moz-background-size: cover
     -o-background-size: cover
     background-size: cover
+    .slogan
+        position: absolute
+        top: 30%
+        width: 100%
+        text-align: center
+        h1
+            color: #fff
+            span
+                display: inline-block
+                padding: 20px 30px
+                border: 10px double #fff
+        h3
+            color: #fff
+            margin: 0
+
+// WELCOME SECTION
 
 .sectTwo
-    background: url(../img/hallway.jpeg) no-repeat center center fixed
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
-    background-size: cover
-    padding: 10px 0
-    text-align: center
-    h2
-        margin-top: 20px
-
-.slogan
-    position: absolute
-    top: 40%
-    width: 100%
-    font-family: $header-font
-    text-align: center
-
-.midSect
     border-top: 10px double #fff
     border-bottom: 10px double #fff
     background-color: $primary-color
     color: #fff
-    padding: 10px 0
+    padding: 20px 0
     text-align: center
     h2
         font-family: $header-font
@@ -145,82 +90,64 @@ p
 .rev-ornament-big
     display: block
     width: 50%
-    margin: 30px auto 10px auto
+    margin: 0 auto
     -moz-transform: scaleY(-1)
     -webkit-transform: scaleY(-1)
     transform: scaleY(-1)
     clear: both
 
-.ornament
-    display: block
-    width: 80%
-    margin: 0 auto
+// SERVICES SECTION
 
-.rev-ornament
-    display: block
-    width: 80%
-    margin: 0 auto
-    -moz-transform: scaleY(-1)
-    -webkit-transform: scaleY(-1)
-    transform: scaleY(-1)
-
-.columns
-    float: left
-    width: 29.3%
-    padding: 10px
-    margin: 30px 1.9%
-    background: #fff
-    border-radius: 5px
-    h3
-        color: $primary-color
-        text-align: center
-
-.image
-    width: 100%
-    background-color: #fff
-    img
-        width: 100%
+.sectThree
+    background: url(../img/hallway.jpeg) no-repeat center center fixed
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    padding: 20px 0
+    text-align: center
+    h2
+        color: #fff
         margin: 0
+    .columns
+        float: left
+        width: 29%
+        padding: 5px
+        margin: 20px 1.5%
+        background: #fff
         border-radius: 5px
+        img
+            width: 100%
+            margin: 0
+            border-radius: 5px
+        h3
+            color: $primary-color
+            text-align: center
+        .ornament
+            display: block
+            width: 80%
+            margin: 0 auto
+        .rev-ornament
+            display: block
+            width: 80%
+            margin: 0 auto
+            -moz-transform: scaleY(-1)
+            -webkit-transform: scaleY(-1)
+            transform: scaleY(-1)
 
-.content
-    background: #fff
-    margin: 0
-    padding: 0
 
-.title
-    display: block
-    text-align: center
-    padding: 10px 0
-    background-color: #fff
-    margin: 0
-    color: $contrast-color
+// SPECIALS SECTION
 
-.button
-    background-color: $primary-color
-    border: none
-    color: #fff
-    padding: 10px 25px
-    text-align: center
-    text-decoration: none
-    border-radius: 5px
-    font-size: 16px
-    margin-top: 20px
-    float: right
-    transition: .5s ease-in-out
-    &:hover
-        background-color: $complement-color
-
-.lowSect
+.sectFour
     background-color: #fff
     color: #fff
-    padding: 10px 0
+    padding: 20px 0
     p
         color: $contrast-color
     h2
         text-align: center
         color: $primary-color
-        margin: 0
+        margin: 20px
     h3
         color: $primary-color
         margin: 5px
@@ -235,65 +162,73 @@ p
             -webkit-box-shadow: 5px 5px 10px #555
             box-shadow:         5px 5px 10px #555
 
-.endSect
+// TESTIMONIALS SECTION
+
+.sectFive
     border-top: 10px double #fff
     border-bottom: 10px double #fff
     background-color: $primary-color
     color: #fff
-    padding: 10px 0
+    padding: 20px 0
     text-align: center
-
-.endColumns
-    float: left
-    width: 29.3%
-    padding: 10px
-    margin: 80px 1.9%
-    border-radius: 5px
-    background: #fff
-    h3
-        color: $primary-color
-        text-align: center
-    p
-        color: $contrast-color
-    img
-        width: 150px
-        height: 150px
-        border-radius: 50%
-        margin-top: -75px
-        border: 5px solid #fff
-
-.cite
-    font-style: italic
-    font-weight: 600
-    float: right
-
-.button-white
-    background-color: #fff
-    border: none
-    color: $primary-color
-    padding: 10px 25px
-    text-align: center
-    text-decoration: none
-    border-radius: 5px
-    font-size: 16px
-    margin: 20px auto 50px auto
-    transition: .5s ease-in-out
-    &:hover
-        background-color: $complement-color
-        color: #fff
+    .button-white
+        margin: 20px auto
+    .columns
+        float: left
+        width: 28%
+        padding: 10px
+        margin: 60px 1.5% 30px 1.5%
+        border-radius: 5px
+        background: #fff
+        h3
+            color: $primary-color
+            text-align: center
+        p
+            color: $contrast-color
+        img
+            width: 150px
+            height: 150px
+            border-radius: 50%
+            margin-top: -75px
+            border: 5px solid #fff
+        .cite
+            font-style: italic
+            font-weight: 600
+            float: right
+    .rev-ornament-big
+        margin-top: 30px
 
 footer
     background: $contrast-color
+    color: #fff
+    font-family: $header-font
+    p
+        font-family: $header-font
+        font-size: 1em
+
+    .footertext
+        display: block
+        float: left
+        margin: 0
+        a
+            font-family: $header-font
+            font-size: 1em
+            font-weight: normal
+            color: #fff
+            &:hover
+                color: $primary-color
     ul
         list-style: none
+        margin: 0
         float: right
         li
             display: inline-block
             margin-left: 10px
             a
                 color: #fff
-    p
-        color: #fff
-        float: left
-        font-family: $header-font
-        font-size: 1em
+                &:hover
+                    color: $primary-color
+    &::after
+        display: block
+        content: ''
+        clear: both
